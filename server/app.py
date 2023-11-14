@@ -59,7 +59,7 @@ def creates_baked_goods():
         new_product = BakedGood(name=new_name, price=new_price, created_at=new_time, updated_at=new_update)
         db.session.add(new_product)
         db.session.commit()
-        return jsonify(new_product.to()), 201 
+        return jsonify(new_product), 201 
     else:
         return 'Method Not Allowed', 405 
     
